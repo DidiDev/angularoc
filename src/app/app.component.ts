@@ -5,6 +5,25 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
-  title = 'angularoc';
+	title = 'angularoc';
+  	isAuth = false;
+
+  	appareilOne = 'Machine à laver';
+  	appareilTwo = 'Frigo';
+  	appareilThree = 'Ordinateur';
+
+	constructor() {
+		setTimeout(
+	    	() => {
+	      	this.isAuth = true;
+	    	}, 4000
+		);
+	}
+
+	onAllumer() {
+    	console.log('On allume tout !');
+	}
+
 }
